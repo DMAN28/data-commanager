@@ -25,18 +25,27 @@ const db = mysql.createConnection(
       // Your MySQL password
       //password: process.env.DB_PW,
       password: 'Admc#4512ay',
-      database: 'fonedrvrtrkr',
+      database: 'f1racers',
     },
-    console.log('Connected to database.')
+    console.log(
+      
+      `Connected to the server 
+      ╦ ╦╔═╗╦  ╔═╗╔═╗╔╦╗╔═╗  ╔╦╗╔═╗  ╔╦╗╦ ╦╔═╗
+      ║║║║╣ ║  ║  ║ ║║║║║╣    ║ ║ ║   ║ ╠═╣║╣ 
+      ╚╩╝╚═╝╩═╝╚═╝╚═╝╩ ╩╚═╝   ╩ ╚═╝   ╩ ╩ ╩╚═╝ 
+      ╔═╗┌─┐┬─┐┌┬┐┬ ┬┬  ┌─┐  ╔═╗╔╗╔╔═╗  ╔╦╗╔═╗╔╦╗╔═╗╔╗ ╔═╗╔═╗╔═╗
+      ╠╣ │ │├┬┘││││ ││  ├─┤  ║ ║║║║║╣    ║║╠═╣ ║ ╠═╣╠╩╗╠═╣╚═╗║╣ 
+      ╚  └─┘┴└─┴ ┴└─┘┴─┘┴ ┴  ╚═╝╝╚╝╚═╝  ═╩╝╩ ╩ ╩ ╩ ╩╚═╝╩ ╩╚═╝╚═╝
+     `)
   );
 
  //GET a single driver
- db.query(`SELECT * FROM drivers WHERE id = 1`, (err, row) => {
-    if (err) {
-      console.log(err);
-    }
-    console.log(row);
-  });  
+//  db.query(`SELECT * FROM drivers WHERE id = 1`, (err, row) => {
+//     if (err) {
+//       console.log(err);
+//     }
+//     console.log(row);
+//   });  
 
 function driverMain () {
  inquirer.prompt({

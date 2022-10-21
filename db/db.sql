@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS fonedrvrtrkr;
+DROP DATABASE IF EXISTS f1racers;
 
-CREATE DATABASE fonedrvrtrkr;
+CREATE DATABASE f1racers;
 
-USE fonedrvrtrkr;
+USE f1racers;
