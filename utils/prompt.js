@@ -128,5 +128,4 @@ function driverMain () {
 
    driverMain ();
 
-       // Export prompt 
-       module.exports = prompt;
+   module.exports = appPrompts;
