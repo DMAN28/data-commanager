@@ -3,6 +3,8 @@ const mysql = require('mysql2');
 const express = require('express');
 //This is used to connect to a MySQL database.
 const inquirer = require('inquirer');
+// The code starts by
+const db = require('./db/connection');
 
 //Next, express is required and it will be used for creating an Express application.
 
