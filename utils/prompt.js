@@ -2,10 +2,28 @@ const inquirer = require('inquirer');
 //The code starts by importing the inquirer module.
 // The function prompts the user to select an option and returns a promise that resolves when they do so.
 //The code above returns an object containing the following keys: type: 'list', name: 'answer', message: 'Please Select an Option: ',
+
+console.log(
+      
+    `----------------------------------------------------------------
+----------------------------------------------------------------
+        You are connected to the 2022 F1 Database
+---------------------------------------------------------------
+----------------------------------------------------------------
+          ╦ ╦╔═╗╦  ╔═╗╔═╗╔╦╗╔═╗  ╔╦╗╔═╗  ╔╦╗╦ ╦╔═╗
+          ║║║║╣ ║  ║  ║ ║║║║║╣    ║ ║ ║   ║ ╠═╣║╣ 
+          ╚╩╝╚═╝╩═╝╚═╝╚═╝╩ ╩╚═╝   ╩ ╚═╝   ╩ ╩ ╩╚═╝ 
+ ╔═╗┌─┐┬─┐┌┬┐┬ ┬┬  ┌─┐  ╔═╗╔╗╔╔═╗  ╔╦╗╔═╗╔╦╗╔═╗╔╗ ╔═╗╔═╗╔═╗
+ ╠╣ │ │├┬┘││││ ││  ├─┤  ║ ║║║║║╣    ║║╠═╣ ║ ╠═╣╠╩╗╠═╣╚═╗║╣ 
+ ╚  └─┘┴└─┴ ┴└─┘┴─┘┴ ┴  ╚═╝╝╚╝╚═╝  ═╩╝╩ ╩ ╩ ╩ ╩╚═╝╩ ╩╚═╝╚═╝
+         `);
+    
+         
+
 function driverMain () {
-    inquirer.prompt({
+    inquirer.prompt([{
        type:'list',
-       name:'answer',
+       name:'menuSelection',
        message: 'Select an option',
        choices:[
            //View teams
@@ -35,14 +53,15 @@ function driverMain () {
            //View teammates?
    
            //View by team
-           'View drivers by team',
+           'View drivers by team',],
+           default: 'View all teams'
        
-       ]
-   })
+
+   }])
    
-   .then((res)=> {
+   .then(res => {
              
-     switch (res.answer){
+     switch (res.menuSelection){
    
          case 'View teams':
          viewTeams();
@@ -68,7 +87,7 @@ function driverMain () {
          addCar();
          break;
      }
-     console.log(answer)
+     //console.log(answer)
    });
    }
    
@@ -121,10 +140,11 @@ function driverMain () {
    }
    
    
-   function viewTeams(){ 
-   return table = "SELECT * FROM team";
+//    function viewTeams(){ 
+//    return table = "SELECT * FROM team";
+
    
-   };
+//    };
 
    driverMain ();
 
