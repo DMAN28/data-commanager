@@ -12,7 +12,7 @@ class DB {
     // Find and display all teams
     findAllTeams() {
         return this.connection.promise().query(
-            `SELECT * FROM teams;`
+            `SELECT * FROM team;`
         );
     }
 };

@@ -26,7 +26,7 @@ VALUES
 ('Ferrari F1-75','Ferrari',3);
 
 
-INSERT INTO driver (first_name, last_name, car_id team_id)
+INSERT INTO driver (first_name, last_name,  team_id, driver_id)
 VALUES
 ('Lewis', 'Hamilton',1, 1),
 ('George', 'Russel',1, NULL),

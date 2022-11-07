@@ -4,7 +4,7 @@ const express = require('express');
 
  //const appFunctions = require('./utils/function')
 
-const database = require('./db')
+const database = require('./utils/command')
 
 //Next, express is required and it will be used for creating an Express application.
 const app = express();
