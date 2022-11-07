@@ -1,8 +1,10 @@
 const express = require('express');
 //This is used to connect to a MySQL database.
-const appPrompts = require('./utils/prompt');
+//const appCommands = require('./utils/command');
 
-const appFunctions = require('./utils/function')
+ //const appFunctions = require('./utils/function')
+
+const database = require('./db')
 
 //Next, express is required and it will be used for creating an Express application.
 const app = express();
@@ -106,7 +108,13 @@ function driverMain () {
      //console.log(answer)
    });
    }
-   
+   // Find and display departments
+
+   function viewTeams() {
+    database.findAllTeams().then(([teams]) => {
+      console.table(teams)
+  }).then(() => mainMenu())
+};
    
    function addDriver () {
      inquirer.prompt([
